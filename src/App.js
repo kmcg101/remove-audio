@@ -17,9 +17,9 @@ import BackgroundImages from "./components/BackgroundImages";
 import ErrorMessage from "./components/ErrorMessage";
 import Footer from "./components/Footer";
 import separator from "./assets/separator.svg";
-import { saveAs } from "file-saver";
+//import { saveAs } from "file-saver";
 
-import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
+//import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
 
 function App() {
   // const [videoSrc, setVideoSrc] = useState("");
