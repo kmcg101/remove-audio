@@ -1,0 +1,15 @@
+<svg id="Yes" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #009edd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_110" data-name="Ellipse 110" class="cls-1" cx="11.5" cy="11.5" r="11.5"/>
+  <path id="Checkbox" class="cls-2" d="M6.9,12,0,5.1,1.4,3.7,6.9,9.1,16,0l1.4,1.4Z" transform="translate(2.726 5.5)"/>
+</svg>

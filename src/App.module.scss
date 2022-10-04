@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+.App {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 20px;
+  //   width: 90%;
+  height: 80vh;
+}
+
+.lobbyAssetDisplay {
+  display: none;
+}
+.separator {
+  display: none;
+  position: relative;
+  top: -8px;
+  @include breakpoint(md) {
+    display: block;
+  }
+}
+
+.displayContainer {
+  z-index: 1000;
+
+  position: relative;
+  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 66px;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
+}
+
+.audioChannelButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 1000;
+}

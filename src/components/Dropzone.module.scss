@@ -1,0 +1,26 @@
+@import "../variables.scss";
+
+.dropzoneContainer {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  //   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  //   background-color: rgb(159 201 235 /30%);
+  //   padding: 25px;
+}
+
+.absoluteText {
+  position: absolute;
+  font-size: 1.7rem;
+  pointer-events: none;
+}

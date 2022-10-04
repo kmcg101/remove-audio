@@ -1,0 +1,64 @@
+// for all:
+// colors
+$light: rgb(255, 255, 255);
+$dark: rgb(0, 0, 0);
+$warning: #e26e6e;
+
+$dropZoneBackground: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+
+*,
+*::before,
+*::after {
+  font-family: "Avenir-Regular";
+  font-size: 1rem;
+  color: $dark;
+}
+@font-face {
+  font-family: "Avenir-Regular";
+  src: local("AvenirNext-Regular"), url("./assets/fonts/AvenirNext-Regular-08.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir-DemiBold";
+  src: local("AvenirNext-DemiBold"), url("./assets/fonts/AvenirNext-DemiBold-03.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir-Medium";
+  src: local("AvenirNext-Medium"), url("./assets/fonts/AvenirNext-Medium-06.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: local("AvenirNext-Heavy"), url("./assets/fonts/AvenirNext-Heavy-09.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir-MediumItalic";
+  src: local("AvenirNext-MediumItalic"), url("./assets/fonts/AvenirNext-MediumItalic-07.ttf") format("truetype");
+}
+
+.relativeCenterBody {
+  position: relative;
+  text-align: center;
+}
+
+// stacking
+$backgroundImageIndex: 100;
+$contentIndex: 150;
+
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// size
+$contentAreaWidth: 500px;
+$borderRadius: 12px;
+$transitionFadeTime: 0.3s;
+// header height
+$headerHeight: 73px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    // 1696px width break point
+    @media (min-width: 106em) {
+      @content;
+    }
+  }
+}

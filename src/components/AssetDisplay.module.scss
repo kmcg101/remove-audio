@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.dropContainer {
+  background-image: $dropZoneBackground;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  // z-index: 100;
+}
+
+.labelText {
+  font-size: 30px;
+  position: absolute;
+  top: -42px;
+  color: $light;
+  font-family: "Avenir-DemiBold";
+  font-size: 1.625rem;
+}
+.relative {
+  position: relative;
+  pointer-events: auto;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+}
+.relative:hover {
+  //   border: 1px red solid;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bottomMargin {
+  margin-bottom: 80px;
+  @include breakpoint(md) {
+    margin-bottom: 23px;
+  }
+}
+
+.imageStyle {
+  position: absolute;
+  left: 46%;
+  top: 43%;
+  z-index: 100;
+}
+
+.newAsset {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  object-fit: contain;
+}
