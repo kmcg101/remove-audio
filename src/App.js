@@ -77,8 +77,8 @@ function App() {
     await ffmpeg.load();
     // // this works on command line:   ffmpeg -i "audio.mp4" -c copy -an "noaudio.mp4"
     // grab the file (end of the command) and name it noAudio.mp4
-    //ffmpeg.FS("writeFile", "noAudio.mp4", await fetchFile(droppedFile.payload));
-    ffmpeg.FS("writeFile", "audio.mp4", await fetchFile(droppedFile.payload));
+    //ffmpeg.FS("writeFile", "noAudio.mp4", await fetchFile(droppedFile));
+    ffmpeg.FS("writeFile", "audio.mp4", await fetchFile(droppedFile));
 
     //await ffmpeg.run("-framerate", "1/10", "-i", "noAudio.mp4", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-vf", "scale=1920:1080", "test.mp4");
     await ffmpeg.run("-i", "audio.mp4", "-c", "copy", "-an", "noaudio.mp4");
@@ -86,7 +86,7 @@ function App() {
     const data = ffmpeg.FS("readFile", "noaudio.mp4");
     console.log("finished2");
     setDroppedFile(URL.createObjectURL(new Blob([data.buffer], { type: "video/mp4" })));
-    //handleDropzoneChanges("payload", data);
+    //handleDropzoneChanges("", data);
     //setVideoSrc(URL.createObjectURL(new Blob([data.buffer], { type: "video/mp4" })));
     // saveAs(data, "noaudio.mp4");
   };
