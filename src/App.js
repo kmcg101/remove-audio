@@ -23,6 +23,7 @@ import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
 
 function App() {
   const [droppedFile, setDroppedFile] = useState({});
+  const [noAudioFile, setNoAudioFile] = useState({});
 
   const [errorMessageArray, setErrorMessageArray] = useState([]);
   const [errorMessageString, setErrorMessageString] = useState();
@@ -85,8 +86,13 @@ function App() {
     console.log("finished1");
     const data = ffmpeg.FS("readFile", "noaudio.mp4");
     console.log("finished2");
-    setDroppedFile(URL.createObjectURL(new Blob([data.buffer], { type: "video/mp4" })));
-    //handleDropzoneChanges("", data);
+    //setNoAudioFile(URL.createObjectURL(new Blob([data.buffer], { type: "video/mp4" })));
+    setNoAudioFile(data);
+
+    // svgFile.payload.arrayBuffer().then((result) => {
+    //   newZip.file(`${filename}.svg`, result);
+    // });
+
     //setVideoSrc(URL.createObjectURL(new Blob([data.buffer], { type: "video/mp4" })));
     // saveAs(data, "noaudio.mp4");
   };
